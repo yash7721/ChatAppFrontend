@@ -50,7 +50,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "/api/user",
+        "https://connectusbackend.onrender.com/api/user",
         {
           name,
           email,
@@ -69,7 +69,7 @@ const Signup = () => {
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
       setPicLoading(false);
-      window.location.replace("/chats");
+      window.location.replace("https://connectusbackend.onrender.com/chats");
     } catch (error) {
       toast({
         title: "Error Occured!",
