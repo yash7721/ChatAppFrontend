@@ -65,7 +65,7 @@ const GroupChatModal = ({ children }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(`https://connectusbackend.onrender.com/api/user?search=${search}`, config);
       console.log(data);
       console.log("hahahah");
 
